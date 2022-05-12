@@ -29,6 +29,8 @@ export default function Login() {
                 let token = response.data.token 
                 // store token to local storage browser 
                 localStorage.setItem(`token-pelanggaran`, token)
+                let dataUser = JSON.stringify(response.data.dataUser)
+                localStorage.setItem(`user-pelanggaran`, dataUser)
                 alert(`Login successed`)
             } else {
                 alert(response.data.message)

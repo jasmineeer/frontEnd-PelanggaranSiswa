@@ -5,10 +5,12 @@ import Siswa from "./pages/Siswa";
 import Pelanggaran from "./pages/Pelanggaran";
 import PelanggaranSiswa from "./pages/PelanggaranSiswa";
 import ListPelanggaranSiswa from "./pages/ListPelanggaranSiswa";
+import Navbar from "./pages/Navbar";
 
 export default function App() {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/signin" element={<Login />} />
         <Route path="/pelanggaransiswa" element={<PelanggaranSiswa />} />

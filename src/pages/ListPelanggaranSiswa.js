@@ -19,7 +19,7 @@ export default function ListPelanggaranSiswa() {
 
     /** Create function to get Data Pelanggaran from Back-End */
     let getData = () => {
-        let endpoint = `http://localhost:8080/pelanggaran_siswa `
+        let endpoint = `http://nodepelanggaransiswa:8080/pelanggaran_siswa `
 
         /** Sending data */
         axios.get(endpoint, authorization)
@@ -32,7 +32,7 @@ export default function ListPelanggaranSiswa() {
 
     let hapusData = item => {
         if(window.confirm(`Are you sure want to delete this item?`)) {
-            let endpoint = `http://localhost:8080/pelanggaran_siswa/${item.id_pelanggaran_siswa}`
+            let endpoint = `http://nodepelanggaransiswa:8080/pelanggaran_siswa/${item.id_pelanggaran_siswa}`
 
             axios.delete(endpoint, authorization)
             .then(response => {

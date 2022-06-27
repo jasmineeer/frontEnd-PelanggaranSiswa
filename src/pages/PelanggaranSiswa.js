@@ -18,7 +18,7 @@ export default function PelanggaranSiswa() {
     }
 
     let getSiswa = () => {
-        let endpoint = `http://localhost:8080/siswa`
+        let endpoint = `http://nodepelanggaransiswa:8080/siswa`
         axios.get(endpoint, authorization)
         .then(response => {
             setSiswa(response.data)
@@ -27,7 +27,7 @@ export default function PelanggaranSiswa() {
     }
 
     let getPelanggaran = () => {
-        let endpoint = `http://localhost:8080/pelanggaran`
+        let endpoint = `http://nodepelanggaransiswa:8080/pelanggaran`
         axios.get(endpoint, authorization)
         .then(response => {
             setPelanggaran(response.data)
@@ -60,7 +60,7 @@ export default function PelanggaranSiswa() {
         let user = JSON.parse(localStorage.getItem(`user-pelanggaran`))
         let id = user.id_user 
 
-        let endpoint = `http://localhost:8080/pelanggaran_siswa`
+        let endpoint = `http://nodepelanggaransiswa:8080/pelanggaran_siswa`
         let request = {
             waktu: selectedDate,
             id_user: id,

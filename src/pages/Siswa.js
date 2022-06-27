@@ -40,14 +40,14 @@ export default function Siswa() {
 
     let getData = () => {
         /**
-         * endpoint = http://localhost:8080/siswa
+         * endpoint = http://nodepelanggaransiswa:8080/siswa
          * method = GET
          * request = -
          * response = array data siswa
          * authorization = Bearer token
          */
 
-        let endpoint = `http://localhost:8080/siswa`
+        let endpoint = `http://nodepelanggaransiswa:8080/siswa`
 
         /** sending data */
         axios.get(endpoint, authorization)
@@ -91,7 +91,7 @@ export default function Siswa() {
         modal.hide()
 
         if(action === "insert") {
-            let endpoint = `http://localhost:8080/siswa`
+            let endpoint = `http://nodepelanggaransiswa:8080/siswa`
             let request = new FormData()
             request.append(`nis`, nis)
             request.append(`nama`, nama)
@@ -107,7 +107,7 @@ export default function Siswa() {
             .catch(error => console.log(error))
 
         } else if(action === "edit") {
-            let endpoint = `http://localhost:8080/siswa/${idSiswa}`
+            let endpoint = `http://nodepelanggaransiswa:8080/siswa/${idSiswa}`
             let request = new FormData()
             request.append(`nis`, nis)
             request.append(`nama`, nama)
@@ -129,7 +129,7 @@ export default function Siswa() {
 
     let hapusSiswa = item => {
         if(window.confirm(`Are you sure want to delete this item?`)) {
-            let endpoint = `http://localhost:8080/siswa/${item.id_siswa}`
+            let endpoint = `http://nodepelanggaransiswa:8080/siswa/${item.id_siswa}`
 
             axios.delete(endpoint, authorization)
             .then(response => {
@@ -177,7 +177,7 @@ export default function Siswa() {
                                 <div className="row">
                                     {/* section gambar */}
                                     <div className="col-4">
-                                        <img src={`http://localhost:8080/image/${item.image}`} alt="Gambar Siswa" 
+                                        <img src={`http://nodepelanggaransiswa:8080/image/${item.image}`} alt="Gambar Siswa" 
                                         style={{width: `250px`, height: `250px`, borderRadius: `50%`}}/>
                                     </div>
 

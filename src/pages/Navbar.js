@@ -6,7 +6,7 @@ import DropdownToggle from "react-bootstrap/esm/DropdownToggle";
 
 export default function Navbar() {
     return(
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{border: `black`}}>
             <div className="container-fluid">
                 <a className="navbar-brand" href="/listPelanggaranSiswa">Pelanggaran Siswa</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +28,7 @@ export default function Navbar() {
                         </li>
 
                         <Dropdown>
-                            <DropdownToggle className="bg-light text-dark" style={{border: `white`}}>Pelanggaran Siswa</DropdownToggle>
+                            <DropdownToggle className="bg-light text-dark">Pelanggaran Siswa</DropdownToggle>
                             <DropdownMenu>
                                 <DropdownItem href="/pelanggaranSiswa">Form Pelanggaran Siswa</DropdownItem>
                                 <DropdownItem href="/listPelanggaranSiswa">List Pelanggaran Siswa</DropdownItem>

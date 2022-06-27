@@ -12,7 +12,7 @@ export default function Login() {
         ev.preventDefault()
         //** Akses ke backend untuk proses login */
         //** method: POST
-        //** endpoint: http://localhost:8080/user/auth
+        //** endpoint: http://nodepelanggaransiswa:8080/user/auth
         //** request; username & password
         //** response: logged & token
 
@@ -20,7 +20,7 @@ export default function Login() {
             username: username,
             password: password 
         }
-        let endpoint = `http://localhost:8080/user/auth`
+        let endpoint = `http://nodepelanggaransiswa:8080/user/auth`
 
         /** Sending data */
         axios.post(endpoint, request)

@@ -38,14 +38,14 @@ export default function Pelanggaran() {
     /** Create function to get Data Pelanggaran from Back-End */
     let getData = () => {
         /**
-         * endpoint = http://localhost:8080/pelanggaran 
+         * endpoint = http://nodepelanggaransiswa:8080/pelanggaran 
          * method = GET
          * request = -
          * response = array data pelanggan
          * authorization = Bearer Token
          */
 
-        let endpoint = `http://localhost:8080/pelanggaran `
+        let endpoint = `http://nodepelanggaransiswa:8080/pelanggaran `
 
         /** Sending data */
         axios.get(endpoint, authorization)
@@ -87,7 +87,7 @@ export default function Pelanggaran() {
         modal.hide()
 
         if(action === `insert`) {
-            let endpoint = `http://localhost:8080/pelanggaran`
+            let endpoint = `http://nodepelanggaransiswa:8080/pelanggaran`
             let request = {
                 nama_pelanggaran: namaPelanggaran,
                 poin: poin 
@@ -102,7 +102,7 @@ export default function Pelanggaran() {
             })
             .catch(error => console.log(error))
         } else if(action === `edit`) {
-            let endpoint = `http://localhost:8080/pelanggaran/${idPelanggaran}`
+            let endpoint = `http://nodepelanggaransiswa:8080/pelanggaran/${idPelanggaran}`
             let request = {
                 nama_pelanggaran: namaPelanggaran,
                 poin: poin 
@@ -121,7 +121,7 @@ export default function Pelanggaran() {
 
     let hapusData = item => {
         if(window.confirm(`Are you sure want to delete this item?`)) {
-            let endpoint = `http://localhost:8080/pelanggaran/${item.id_pelanggaran}`
+            let endpoint = `http://nodepelanggaransiswa:8080/pelanggaran/${item.id_pelanggaran}`
             axios.delete(endpoint, authorization)
             .then(response => {
                 /** sending data */

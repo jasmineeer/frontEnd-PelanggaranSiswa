@@ -11,4 +11,4 @@ FROM node:alpine
 RUN npm install -g serve --force
 WORKDIR /app 
 COPY --from=build /app/build .
-CMD ["serve", "-p", "8080", "-s", "."]
+CMD ["serve", "-p", "3000", "-s", "."]

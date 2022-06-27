@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  react-pelanggaran:
+    container_name: reactpelanggaransiswa
+    image: react-pelanggaran 
+    build: 
+      context: ./react-pelanggaran 
+      dockerfile: Dockerfile 
+    ports:
+      - "3000:3000"
+    volumes: 
+      - ./react-pelanggaran:/usr/src/app 
+  node-pelanggaran:
+    container_name: nodepelanggaransiswa
+    image: node-pelanggaran 
+    build:
+      context: ./node-pelanggaran 
+      dockerfile: Dockerfile
+    ports: 
+      - "8080:8080"
+    volumes: 
+      - ./node-pelanggaran:/usr/src/app 
